@@ -19,7 +19,6 @@ class AdminController extends Controller
             if(Auth::user()->usertype==1){
                 return view('admin.add_doctor');
             }else{
-
                 return redirect()->back();
             }
         }
@@ -32,6 +31,7 @@ class AdminController extends Controller
     {
         $doctor = new Doctor();
         $doctor->name = $request->fullname;
+        // left side को name database को table को name हो र right side ko fullname form को name भित्र रहेको fullname हो । यसको मतलब यो भयो कि form मा admin ले जे नाम राखेर पठाअछ त्यो नाम database को name भन्ने table भित्र राखदिनु ।
         $doctor->phone = $request->number;
         $doctor->speciality = $request->speciality;
         $doctor->room = $request->room;

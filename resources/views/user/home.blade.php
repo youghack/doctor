@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="copyright" content="vipcoding, https://vipcoding.com.np">
 
-  <meta name="copyright" content="MACode ID, https://macodeid.com/">
-
-  <title>Coders Hospital</title>
+  <title>Janata Sahayak</title>
 
   <link rel="stylesheet" href="../assets/css/maicons.css">
 
@@ -19,6 +18,7 @@
   <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
 
   <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/custom.css">
 </head>
 <body>
 
@@ -39,12 +39,12 @@
   </div>
 @endif
 
-  <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
+  <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.png);">
     <div class="hero-section">
       <div class="container text-center wow zoomIn">
-        <span class="subhead">Let's make your life happier</span>
-        <h1 class="display-4">Healthy Living</h1>
-        <a href="#" class="btn btn-primary">Let's Consult</a>
+        <span class="subhead">Your Privacy, Our Priority – Protecting What Matters Most!</span>
+        <h1 class="display-4">Your Complain, Our Action </h1>
+        <a href="https://wa.me/9817621779" class="btn btn-primary">Let's Consult</a>
       </div>
     </div>
   </div>
@@ -86,9 +86,9 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 py-3 wow fadeInUp">
-            <h1>Welcome to Your Health <br> Center</h1>
-            <p class="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius, inventore nemo labore eaque porro consequatur ex aspernatur. Explicabo, excepturi accusantium! Placeat voluptates esse ut optio facilis!</p>
-            <a href="about.html" class="btn btn-primary">Learn More</a>
+            <h1>Welcome to Your Coders <br> Hospital</h1>
+            <p class="text-grey mb-4">Welcome to Coders Hospital, a realm where health meets technology in perfect harmony. At Coders Hospital, we transcend traditional boundaries, weaving a tapestry of healing with the precision of code and the warmth of compassion. Our commitment is to redefine healthcare through innovation, ensuring that every patient receives unparalleled care in the digital age. Here, the language of code intertwines seamlessly with the art of healing, creating a unique and transformative experience for all. Step into Coders Hospital, where the future of healthcare unfolds, and where your well-being is our foremost priority. Your journey to health begins with us.</p>
+            <a href="https://wa.me/9814896965" class="btn btn-primary">Contact Hospital</a>
           </div>
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
             <div class="img-place custom-img-1">
@@ -101,21 +101,16 @@
   </div> <!-- .bg-light -->
 
   <!--  Doctor Section start-->
-@include('user.doctor')
+    @include('user.doctor')
   <!-- Doctor Section End -->
 
-
-  <!-- News-section Start -->
-  @include('user.news')
-  <!-- News-section End -->
 
   <!-- Appointment-section Start -->
   @include('user.appointment')
   <!-- Appointment-section End -->
 
   <!-- .banner Start -->
-
-  <div class="page-section banner-home bg-image" style="background-image: url(../assets/img/banner-pattern.svg);">
+  {{-- <div class="page-section banner-home bg-image" style="background-image: url(../assets/img/banner-pattern.svg);">
     <div class="container py-5 py-lg-0">
       <div class="row align-items-center">
         <div class="col-lg-4 wow zoomIn">
@@ -130,10 +125,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
   <!-- .banner End -->
 
-
+@include('user.location')
   <!-- Footer Start -->
   @include('user.footer')
   <!-- Footer End -->

@@ -6,7 +6,7 @@
             <div class="site-info">
               <a href="#"><span class="mai-call text-primary"></span> +977 981 489 6965</a>
               <span class="divider">|</span>
-              <a href="#"><span class="mai-mail text-primary"></span> Vipcoding.np@gmail.com</a>
+              <a href="#"><span class="mai-mail text-primary"></span> Hospital.np@gmail.com</a>
             </div>
           </div>
           <div class="col-sm-4 text-right text-sm">
@@ -21,67 +21,105 @@
       </div> <!-- .container -->
     </div> <!-- .topbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
-      <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}"><span class="text-primary">Coders</span>-Hospital</a>
 
-        <form action="#">
-          <div class="input-group input-navbar">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
+
+
+
+
+
+
+      <!-- middlebar Start-->
+      <div class="middle-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-10">
+                    <div class="logo">
+                        <a href="/" class="d-flex">
+                            <img src="../assets/img/hospitallogo.png" class="img-fluid" alt="logo">
+                            <div class="branding-name d-flex flex-column justify-content-center">
+                                <h6>
+                                    प्रदेश नं. २
+                                </h6>
+                                <h3>
+                                    जनता साहायक
+                                </h3>
+                                <h4>
+                                    जनकपुरधाम, धनुषा
+                                </h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="jankitemple col-md-8 d-none d-md-block" style="background: url(https://i.postimg.cc/8Ctq2cxp/janaki.png) no-repeat bottom right !important;">
+                    <div class="nepal d-flex justify-content-end">
+                        <img src="../assets/img/animated_nepal_flag.gif" height="8px" class="img-fluid" alt="nepal-flag-gif">
+                    </div>
+                </div>
             </div>
-            <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
-          </div>
-        </form>
+        </div>
+    </div>
+    <!-- middlebar End-->
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupport">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{{ url('/') }}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Doctors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
 
-            @if (Route::has('login'))
-            @auth
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+        <div class="container">
+          {{-- <a class="navbar-brand" href="{{ url('/') }}"><span class="text-primary">Coders</span>-Hospital</a> --}}
+          {{-- <a class="navbar-brand" href="{{ url('/') }}"><span class="text-primary"><img height="100px" src="../assets/img/hospitallogo.png" alt="Logo"></span></a> --}}
 
-            <li class="nav-item">
-                <a class="nav-link" style="background-color: greenyellow; color: white" href="{{ url('myappointment') }}">My Appointment</a>
+
+
+              <div class="input-group-prepend">
+               <iframe scrolling="no" border="0" frameborder="0" marginwidth="0" marginheight="0" allowtransparency="true" src="https://www.ashesh.com.np/linknepali-time.php?dwn=only&font_color=333333&font_size=14&bikram_sambat=0&format=dmyw&api=6521z9n526" width="165" height="22"></iframe>
+              </div>
+
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupport">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{{ url('/') }}">Home</a>
               </li>
-            <!-- x-app-layout is responsible to get logout option for user -->
-            <x-app-layout>
-            </x-app-layout>
-
-
-            @else
-
-            <li class="nav-item">
-              <a class="btn btn-primary ml-lg-3" href="{{ route('login') }}">Login</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="btn btn-primary ml-lg-3" href="{{ route('register') }}">Register</a>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url('aboutus') }}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('viewdoctor')}}">Doctors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://infoverse.sjcomputercenter.com.np/">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://wa.me/9814896965">Contact</a>
               </li>
 
-              @endauth
-              @endif
+              @if (Route::has('login'))
+              @auth
 
-          </ul>
-        </div> <!-- .navbar-collapse -->
-      </div> <!-- .container -->
+              <li class="nav-item">
+                  <a class="nav-link" style="background-color: greenyellow; color: white" href="{{ url('myappointment') }}">My Appointment</a>
+                </li>
+                <x-app-layout> </x-app-layout>
+
+
+              @else
+
+              <li class="nav-item">
+                <a class="btn btn-primary ml-lg-3" href="{{ route('login') }}">Login</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="btn btn-primary ml-lg-3" href="{{ route('register') }}">Register</a>
+                </li>
+
+                @endauth
+                @endif
+
+            </ul>
+          </div> <!-- .navbar-collapse -->
+        </div> <!-- .container -->
     </nav>
   </header>

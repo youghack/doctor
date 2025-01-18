@@ -20,7 +20,6 @@
       </ul>
     </div>
     <ul class="navbar-nav navbar-right">
-      <!-- to get logout option we have uses x-app-layout-->
       <x-app-layout> </x-app-layout>
     </ul>
   </nav>
