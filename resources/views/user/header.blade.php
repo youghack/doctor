@@ -6,7 +6,7 @@
             <div class="site-info">
               <a href="#"><span class="mai-call text-primary"></span> +977 981 489 6965</a>
               <span class="divider">|</span>
-              <a href="#"><span class="mai-mail text-primary"></span> Hospital.np@gmail.com</a>
+              <a href="#"><span class="mai-mail text-primary"></span> gunaso.np@gmail.com</a>
             </div>
           </div>
           <div class="col-sm-4 text-right text-sm">
@@ -87,10 +87,10 @@
                 <a class="nav-link" href="{{ url('aboutus') }}">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{url('viewdoctor')}}">Doctors</a>
+                <a class="nav-link" href="{{url('viewdoctor')}}">Administrator</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://infoverse.sjcomputercenter.com.np/">News</a>
+                <a class="nav-link" href="#">News</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="https://wa.me/9814896965">Contact</a>

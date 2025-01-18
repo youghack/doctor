@@ -42,9 +42,9 @@
   <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.png);">
     <div class="hero-section">
       <div class="container text-center wow zoomIn">
-        <span class="subhead">Your Privacy, Our Priority – Protecting What Matters Most!</span>
+        <span class="subhead" style="color: grey">Your Privacy, Our Priority – Protecting What Matters Most!</span>
         <h1 class="display-4">Your Complain, Our Action </h1>
-        <a href="https://wa.me/9817621779" class="btn btn-primary">Let's Consult</a>
+        <a href="https://wa.me/9817621779" class="btn btn-primary">Emergency Contact</a>
       </div>
     </div>
   </div>
@@ -54,28 +54,38 @@
     <div class="page-section py-3 mt-md-n5 custom-index">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-4 py-3 py-md-0">
+          <div class="col-md-3 py-3 py-md-0">
             <div class="card-service wow fadeInUp">
-              <div class="circle-shape bg-secondary text-white">
+              <div class="circle-shape bg-accent text-white">
                 <span class="mai-chatbubbles-outline"></span>
               </div>
-              <p><span>Chat</span> with a doctors</p>
+              <p><span>Register </span> complain</p>
             </div>
           </div>
-          <div class="col-md-4 py-3 py-md-0">
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-primary text-white">
+                <span class="mai-person"></span>
+              </div>
+              <p><span>Contact</span> Administration</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-accent text-white">
+                <span class="mai-time-outline"></span>
+              </div>
+              <p><span>Track</span> Progress</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 py-3 py-md-0">
             <div class="card-service wow fadeInUp">
               <div class="circle-shape bg-primary text-white">
                 <span class="mai-shield-checkmark"></span>
               </div>
-              <p><span>One</span>-Health Protection</p>
-            </div>
-          </div>
-          <div class="col-md-4 py-3 py-md-0">
-            <div class="card-service wow fadeInUp">
-              <div class="circle-shape bg-accent text-white">
-                <span class="mai-basket"></span>
-              </div>
-              <p><span>One</span>-Health Pharmacy</p>
+              <p><span>Receive </span>Solution</p>
             </div>
           </div>
         </div>
@@ -86,13 +96,13 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 py-3 wow fadeInUp">
-            <h1>Welcome to Your Coders <br> Hospital</h1>
-            <p class="text-grey mb-4">Welcome to Coders Hospital, a realm where health meets technology in perfect harmony. At Coders Hospital, we transcend traditional boundaries, weaving a tapestry of healing with the precision of code and the warmth of compassion. Our commitment is to redefine healthcare through innovation, ensuring that every patient receives unparalleled care in the digital age. Here, the language of code intertwines seamlessly with the art of healing, creating a unique and transformative experience for all. Step into Coders Hospital, where the future of healthcare unfolds, and where your well-being is our foremost priority. Your journey to health begins with us.</p>
-            <a href="https://wa.me/9814896965" class="btn btn-primary">Contact Hospital</a>
+            <h1 style="font-size: 20px">Welcome to Your Helpdesk! <br> <strong>जनता साहायक</strong></h1>
+            <p class="text-grey mb-4 " style="text-align: justify">Welcome to JantaSahayak, a groundbreaking platform where technology meets civic engagement in perfect harmony. At JantaSahayak, we go beyond conventional complaint systems, providing an innovative digital solution to bridge the gap between citizen and administration. Our mission is to empower citizen and stakeholders by addressing concerns efficiently, transparently, and compassionately. Here, technology and accountability work hand in hand, creating a seamless experience that fosters trust and collaboration. Step into JantaSahayak, where every voice matters, and together, we shape a more responsive and harmonious environment. Your journey to positive change starts here.</p>
+            <a href="https://wa.me/9814896965" class="btn btn-primary">Helpdesk</a>
           </div>
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
             <div class="img-place custom-img-1">
-              <img src="../assets/img/bg-doctor.png" alt="">
+              <img src="../assets/img/about.png" alt="">
             </div>
           </div>
         </div>

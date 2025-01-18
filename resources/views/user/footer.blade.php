@@ -3,9 +3,9 @@
     <div class="container">
       <div class="row px-md-3">
         <div class="col-sm-6 col-lg-3 py-3">
-          <h5>Company</h5>
+          <h5>जनता साहायक</h5>
           <ul class="footer-menu">
-            <li><a href="#">About Us</a></li>
+            <li><a href="/aboutus">About Us</a></li>
           </ul>
         </div>
         <div class="col-sm-6 col-lg-3 py-3">
@@ -16,18 +16,19 @@
           </ul>
         </div>
         <div class="col-sm-6 col-lg-3 py-3">
-          <h5>Our partner</h5>
+          <h5>Our complaint Services</h5>
           <ul class="footer-menu">
-            <li><a href="#">RamJanki Hospital</a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#">Child Labour</a></li>
+            <li><a href="#">Cyber Crime</a></li>
+            <li><a href="#">Cyber bullying</a></li>
+            <li><a href="#">Theft</a></li>
           </ul>
         </div>
         <div class="col-sm-6 col-lg-3 py-3">
           <h5>Contact</h5>
           <p class="footer-link mt-2">Janakpurdham, Nepal</p>
-          <a href="#" class="footer-link">9817621779</a>
-          <a href="#" class="footer-link">mukesh.np@gmail.com</a>
+          <a href="#" class="footer-link">980 000 0000</a>
+          <a href="#" class="footer-link">gunaso.np@gmail.com</a>
 
           <h5 class="mt-3">Social Media</h5>
           <div class="footer-sosmed mt-3">

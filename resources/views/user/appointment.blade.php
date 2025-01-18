@@ -1,21 +1,34 @@
 
 <div class="page-section">
     <div class="container">
-      <h1 class="text-center wow fadeInUp">Make an Appointment</h1>
+      <h1 class="text-center wow fadeInUp">Register Your Complain</h1>
 
-      <form class="main-form" action="{{ url('appointment') }}" method="POST">
+      <form class="main-form" action="{{ url('appointment') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row mt-5 ">
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
             <input type="text" name="name" class="form-control" placeholder="Full name">
           </div>
+           <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
+            <input type="text" name="citizenship" class="form-control" placeholder="Citizenship no.">
+          </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInRight">
             <input type="text" name="email" class="form-control" placeholder="Email address..">
+          </div>
+          <div class="col-12 col-sm-6 py-2 wow fadeInUp" data-wow-delay="300ms">
+            <input type="text" name="number" class="form-control" placeholder="Phone Number..">
+          </div>
+          <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
+            <label class="file-upload">
+              <input type="file" name="avatar" id="image" class="form-control" required>
+              <span class="placeholder-text">आफनो फोटो राख्नुहोस्</span>
+            </label>
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
             <input type="date" name="date" class="form-control">
           </div>
-          <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
+
+          {{-- <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
             <select name="doctor" id="doctorname" class="custom-select">
                 <option> Select Doctor</option>
                 @foreach ($doctor as $doctors)
@@ -23,13 +36,10 @@
                 @endforeach
 
             </select>
-          </div>
+          </div> --}}
 
-          <div class="col-12 col-sm-6 py-2 wow fadeInUp" data-wow-delay="300ms">
-            <input type="text" name="number" class="form-control" placeholder="Phone Number..">
-          </div>
           <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
-            <textarea name="message" id="message" class="form-control" rows="6" placeholder="Appointment किन चाहियो छोटो विवरण लेख्नुहोस् ..."></textarea>
+            <textarea name="message" id="message" class="form-control" rows="6" placeholder="गुनासोको बारेमा छोटो विवरण लेख्नुहोस् ..."></textarea>
           </div>
         </div>
 

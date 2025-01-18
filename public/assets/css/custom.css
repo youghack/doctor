@@ -25,11 +25,11 @@
   justify-content: space-around;
 }
 .text{
-  width: 500px;
+  width: 700px;
 }
 
 .text h2{
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -42,9 +42,10 @@ span{
   color: #4070f4;
 }
 .text p{
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
   letter-spacing: 1px;
+  text-align: justify;
 }
 .data{
   margin-top: 30px;

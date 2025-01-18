@@ -24,22 +24,22 @@
   <!--  Doctor Section start-->
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-3 py-3 wow fadeInUp">
-          <h1>Our Doctors</h1>
-          <p class="text-grey mb-5" style="text-align: justify">Our doctors are highly trained experts in the art and science of healing. With a profound understanding of human anatomy, physiology, and medical treatments, they diagnose, treat, and prevent illnesses. doctors strive to improve and sustain the health and well-being of individuals, embodying the essence of medical expertise.</p>
+        <div class="col-md-3 py-2 wow fadeInUp">
+          <h1><strong>Administrators</strong></h1>
+          <p class="text-grey mb-5 text-justify">Our administrators are dedicated public servants, including police officers, Chief District Officers (CDOs), and other key officials, who work tirelessly to ensure the seamless operation of JantaSahayak, the national complaint management system. With a strong commitment to justice, accountability, and efficient governance, they manage and address public grievances with transparency and diligence. By bridging the gap between citizens and authorities, they foster trust, promote fairness, and ensure that every voice is heard and every issue is resolved for a better and more responsive nation.</p>
         </div>
 
         <div class="col-md-9 wow fadeInRight my-5 px-2" data-wow-delay="400ms">
             <div class="owl-carousel wow fadeInUp" id="doctorSlideshow">
                 @foreach ($doctor as $doctors)
-                <div class="card-doctor mb-3 my-2" style="max-width: 350px;">
+                <div class="card-doctor mb-3 my-3" style="max-width: 350px; max-height:350px; border-radius: 25px">
                       <div class="card">
                           <div class="image">
-                            <img height="300px" src="{{ asset($doctors->image) }}"/>
+                            <img height="300px" src="{{ asset($doctors->image) }}" alt="{{ $doctors->name }}"/>
                           </div>
                           <div class="details">
                             <div class="center">
-                              <h1>Dr. &nbsp;{{ $doctors->name }}</h1>
+                              <h1>&nbsp;{{ $doctors->name }}</h1>
                               <p>{{ $doctors->speciality }} Specialist</p>
                               <p>Room No.: &nbsp;{{ $doctors->room }}</p>
                               <ul>
