@@ -20,7 +20,7 @@
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
             <label class="file-upload">
-              <input type="file" name="avatar" id="image" class="form-control" required>
+              <input type="file" name="avatar" id="image" class="form-control" capture="camera" required>
               <span class="placeholder-text">आफनो फोटो राख्नुहोस्</span>
             </label>
           </div>
