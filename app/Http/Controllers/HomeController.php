@@ -66,7 +66,7 @@ class HomeController extends Controller
             'citizenship' => 'required|string',
             'email' => 'required|email',
             'number' => 'required|numeric',
-            'date' => 'required|date',
+            'gfather' => 'required|string',
             'avatar' => 'required|file|image',
         ]);
 
@@ -83,9 +83,9 @@ class HomeController extends Controller
             $data->avatar = "avatars/$newName";
         }
 
-        $data->date = $request->date;
+        $data->gfather = $request->gfather;
         $data->message = $request->message;
-        $data->status = 'In Progress';
+        $data->status = 'Not Viewed';
 
         if (Auth::id()) {
             $data->user_id = Auth::user()->id;
@@ -93,9 +93,16 @@ class HomeController extends Controller
 
         $data->save();
 
-        return redirect()->back()->with('message', 'Appointment Request Successful. We will contact you soon.');
+        return redirect()->back()->with('message', 'तपाईको Complain Register भएको छ, हामी तपाई लाई छिटो सम्पर्क गर्नेछौँ');
     }
 
+    public function complainview(){
+        if(Auth::user()->usertype == 0){
+            return view('user.appointment');
+        }else{
+            return redirect()->back();
+        }
+    }
 
     public function myappointment()
     {
@@ -123,7 +130,7 @@ class HomeController extends Controller
     public function viewdoctor()
     {
         $doctor = Doctor::all();
-        return view('user.viewdoctor', compact('doctor'));
+        return view('user.view_administration', compact('doctor'));
     }
 
 

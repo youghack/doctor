@@ -43,6 +43,6 @@
 
       <hr>
 
-      <p id="copyright">Copyright &copy; {{ date('Y-m-d') }} <a href="/">Coders Hospital</a>. All right reserved</p>
+      <p id="copyright">Copyright &copy; {{ date('Y-m-d') }} <a href="/">जनता साहायक</a>. All right reserved</p>
     </div>
   </footer>

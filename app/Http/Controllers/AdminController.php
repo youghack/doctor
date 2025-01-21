@@ -16,13 +16,12 @@ class AdminController extends Controller
     public function addview()
     {
         if (Auth::id()) {
-            if(Auth::user()->usertype==1){
-                return view('admin.add_doctor');
-            }else{
+            if (Auth::user()->usertype == 1) {
+                return view('admin.add_administrator');
+            } else {
                 return redirect()->back();
             }
-        }
-        else {
+        } else {
             return redirect('login');
         }
     }
@@ -36,62 +35,79 @@ class AdminController extends Controller
         $doctor->speciality = $request->speciality;
         $doctor->room = $request->room;
 
-        if($request->hasFile('image')){
+        if ($request->hasFile('image')) {
             $file = $request->image;
-            $newName = time(). "." .$file->getClientOriginalExtension();
-            $file->move('images',$newName);
+            $newName = time() . "." . $file->getClientOriginalExtension();
+            $file->move('images', $newName);
             $doctor->image = "images/$newName";
         }
 
         $doctor->save();
-        return redirect()->back()->with('message','Doctor Added Successfully');
+        return redirect()->back()->with('message', 'Doctor Added Successfully');
     }
 
-    public function showappointment(){
+    public function complain()
+    {
         if (Auth::id()) {
-            if(Auth::user()->usertype==1){
-        $data  = Appointment::all();
-        return view('admin.showappointment',compact('data'));
-            }else {
+            if (Auth::user()->usertype == 1) {
+                $data  = Appointment::all();
+                return view('admin.complain', compact('data'));
+            } else {
                 return redirect()->back();
             }
-        }
-        else {
+        } else {
             return redirect('login');
         }
     }
+    public function showcomplain(string $id)
+    {
+        if (Auth::id()) {
+            if (Auth::user()->usertype == 1) {
+                $data = Appointment::find($id);
+                return view('admin.complain_view', compact('data'));
+            } else {
+                return redirect()->back();
+            }
+        }
+    }
 
-    public function approved($id){
+    public function done($id)
+    {
         $data = Appointment::find($id);
-        $data->status = 'approved';
+        $data->status = 'done';
         $data->save();
         return redirect()->back();
     }
 
-    public function canceled($id){
+    public function pending($id)
+    {
         $data = Appointment::find($id);
-        $data->status = 'Canceled';
+        $data->status = 'pending';
         $data->save();
         return redirect()->back();
     }
 
-    public function showdoctor(){
+    public function showadministrator()
+    {
         $data = Doctor::all();
-        return view('admin.showdoctor',compact('data'));
+        return view('admin.showadministrator', compact('data'));
     }
 
-    public function deletedoctor($id){
+    public function deletedoctor($id)
+    {
         $data = Doctor::find($id);
         $data->delete();
         return redirect()->back();
     }
 
-    public function updatedoctor($id){
+    public function update_administrator($id)
+    {
         $data = Doctor::find($id);
-        return view('admin.update_doctor',compact('data'));
+        return view('admin.update_administrator', compact('data'));
     }
 
-    public function editdoctor(Request $request, $id){
+    public function editdoctor(Request $request, $id)
+    {
         $doctor = Doctor::find($id);
 
         $doctor->name = $request->fullname;
@@ -99,28 +115,28 @@ class AdminController extends Controller
         $doctor->speciality = $request->speciality;
         $doctor->room = $request->room;
 
-        if($request->hasFile('image')){
+        if ($request->hasFile('image')) {
             $file = $request->image;
-            $newName = time(). "." .$file->getClientOriginalExtension();
-            $file->move('images',$newName);
+            $newName = time() . "." . $file->getClientOriginalExtension();
+            $file->move('images', $newName);
             $doctor->image = "images/$newName";
         }
         $doctor->update();
-        return redirect()->back()->with('message','Doctor Updated Successfully');
-
+        return redirect()->back()->with('message', 'Administrator Updated Successfully');
     }
 
-    public function emailview($id){
+    public function emailview($id)
+    {
 
         $data = Appointment::find($id);
 
-        return view('admin.email_view',compact('data'));
-
+        return view('admin.email_view', compact('data'));
     }
 
-    public function sendemail(Request $request, $id){
+    public function sendemail(Request $request, $id)
+    {
         $data = Appointment::find($id);
-        $details=[
+        $details = [
             'greeting' => $request->greeting,
             'body' => $request->body,
             'actiontext' => $request->actiontext,
@@ -128,10 +144,7 @@ class AdminController extends Controller
             'endpart' => $request->endpart,
         ];
 
-        Notification::send($data,new SendEmailNotification($details));
-        return redirect()->back()->with('message','Email sent Successfully');
-
-
-
+        Notification::send($data, new SendEmailNotification($details));
+        return redirect()->back()->with('message', 'Email sent Successfully');
     }
 }

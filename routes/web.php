@@ -34,18 +34,20 @@ Route::middleware([
 });
 
 // Admin Panel Routing
-Route::get('/add_doctor_view',[AdminController::class,'addview']);
+Route::get('/add_administrator_view',[AdminController::class,'addview']);
 Route::post('/upload_doctor',[AdminController::class,'upload']);
-Route::get('/showappointment',[AdminController::class,'showappointment']);
-Route::get('/approved/{id}',[AdminController::class,'approved']);
-Route::get('/canceled/{id}',[AdminController::class,'canceled']);
-Route::get('/showdoctor',[AdminController::class,'showdoctor']);
+Route::get('/complain',[AdminController::class,'complain']);
+Route::get('/viewcomplain/{id}',[AdminController::class,'showcomplain']);
+Route::get('/done/{id}',[AdminController::class,'done']);
+Route::get('/pending/{id}',[AdminController::class,'pending']);
+Route::get('/showadministrator',[AdminController::class,'showadministrator']);
 Route::get('/deletedoctor/{id}',[AdminController::class,'deletedoctor']);
-Route::get('/updatedoctor/{id}',[AdminController::class,'updatedoctor']);
+Route::get('/update_administrator/{id}',[AdminController::class,'update_administrator']);
 Route::post('/editdoctor/{id}',[AdminController::class,'editdoctor']);
 Route::get('/emailview/{id}',[AdminController::class,'emailview']);
 Route::post('/sendemail/{id}',[AdminController::class,'sendemail']);
-//User or Patient
+//User or victim
+Route::post('/complainview',[HomeController::class,'complainview']);
 Route::post('/appointment',[HomeController::class,'appointment']);
 Route::get('/myappointment',[HomeController::class,'myappointment']);
 Route::get('/cancel_appoint/{id}',[HomeController::class,'cancel_appoint']);
