@@ -21,11 +21,12 @@
           font-family: 'Arial', 'Roboto', 'Open Sans', 'Preeti', 'Mangal','Kokila', sans-serif; /* Add fallback fonts */
         }
       </style>
-    <!-- Google Fonts -->
+      <link rel="stylesheet" href="..assets/fonts/maicons.ttf">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/maicons.css">
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+    {{-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet"> --}}
 
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
 
